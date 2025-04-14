@@ -32,8 +32,8 @@ def get_commit_stats(owner):
         return None
 
 
-def generate_socialify_url(days_since):
-    description = f"⏳ На GitHub: {days_since} дней"
+def generate_socialify_url(days_since, first_date):
+    description = f"💾 Old-school coder ({first_date}) | {days_since} days of commits, coffee & magic ☕💻"
     encoded_desc = quote(description)
     return (
         f"https://socialify.git.ci/MamonovEvgeniy/MamonovEvgeniy/image"
@@ -50,13 +50,10 @@ def main():
     owner = os.getenv('GITHUB_REPOSITORY_OWNER', 'MamonovEvgeniy')
     external_commits = get_commit_stats(owner)
 
-    socialify_url = generate_socialify_url(days_since)
+    socialify_url = generate_socialify_url(days_since, first_date)
 
     readme_content = f"""
 <h1 align="center">Hey! <img src="" width="30"/> Welcome to my page<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h1>
-
-📅 Дата регистрации на GitHub: {first_date}  
-⏳ На GitHub: {days_since} дней 
 
 📊 Коммиты во внешние репозитории: {external_commits or 'N/A'} 
 
@@ -68,6 +65,7 @@ def main():
 
     Path("README.md").write_text(readme_content, encoding="utf-8")
     print(f"✅ README updated! First date: {first_date} | Days: {days_since}")
+
 
 if __name__ == "__main__":
     main()

@@ -19,59 +19,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           DATE=$(bash .github/scripts/get_first_commit.sh "${{ github.repository_owner }}")
-          echo "User registration date: $DATE"
           echo "FIRST_COMMIT_DATE=$DATE" >> $GITHUB_ENV
-      
+
       - name: Make scripts executable
-        run: |
-          chmod +x .github/scripts/get_all_commits.sh
-          chmod +x .github/scripts/get_current_year_commits.sh
-          chmod +x .github/scripts/get_external_commits.sh
-      
-      - name: Get total commits count
-        id: total_commits
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "=== Checking total commits methods ==="
-          METHOD1=$(./.github/scripts/get_all_commits.sh "${{ github.repository_owner }}" | head -n 1)
-          METHOD2=$(./.github/scripts/get_all_commits.sh "${{ github.repository_owner }}" | tail -n 3 | head -n 1)
-          METHOD3=$(./.github/scripts/get_all_commits.sh "${{ github.repository_owner }}" | tail -n 2 | head -n 1)
-          
-          echo "Method 1 (Events API): $METHOD1"
-          echo "Method 2 (Search API): $METHOD2"
-          echo "Method 3 (REST API): $METHOD3"
-          
-          # Выбираем наибольшее значение из методов
-          TOTAL_COMMITS=$(echo -e "$METHOD1\n$METHOD2\n$METHOD3" | sort -nr | head -n 1)
-          echo "Selected total commits: $TOTAL_COMMITS"
-          echo "TOTAL_COMMITS=$TOTAL_COMMITS" >> $GITHUB_ENV
-      
-      - name: Get current year commits
-        id: year_commits
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "=== Checking current year commits methods ==="
-          METHOD1=$(./.github/scripts/get_current_year_commits.sh "${{ github.repository_owner }}" | jq length)
-          METHOD2=$(./.github/scripts/get_current_year_commits.sh "${{ github.repository_owner }}" | jq 'unique_by(.sha) | length')
-          
-          echo "Method 1 count: $METHOD1"
-          echo "Method 2 count: $METHOD2"
-          
-          # Выбираем наибольшее значение
-          YEAR_COMMITS=$(echo -e "$METHOD1\n$METHOD2" | sort -nr | head -n 1)
-          echo "Selected current year commits: $YEAR_COMMITS"
-          echo "YEAR_COMMITS=$YEAR_COMMITS" >> $GITHUB_ENV
-      
+        run: chmod +x .github/scripts/*.sh
+
       - name: Get external commits
         id: external_commits
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "=== Getting external commits ==="
           EXTERNAL=$(./.github/scripts/get_external_commits.sh "${{ github.repository_owner }}")
-          echo "External commits: $EXTERNAL"
           echo "EXTERNAL_COMMITS=$EXTERNAL" >> $GITHUB_ENV
       
       - name: Update README
