@@ -32,8 +32,8 @@ def get_commit_stats(owner):
         return None
 
 
-def generate_socialify_url(days_since, first_date):
-    description = f"💾 Old-school coder ({first_date}) | {days_since} days of commits, coffee & magic ☕💻"
+def generate_socialify_url(days_since, first_date, external_commits):
+    description = f"💾 Old-school coder ({first_date})\n{days_since} days of commits, coffee & magic ☕💻\n+{external_commits} karma (helping external projects)"
     encoded_desc = quote(description)
     return (
         f"https://socialify.git.ci/MamonovEvgeniy/MamonovEvgeniy/image"
@@ -50,12 +50,10 @@ def main():
     owner = os.getenv('GITHUB_REPOSITORY_OWNER', 'MamonovEvgeniy')
     external_commits = get_commit_stats(owner)
 
-    socialify_url = generate_socialify_url(days_since, first_date)
+    socialify_url = generate_socialify_url(days_since, first_date, external_commits or 0)
 
     readme_content = f"""
 <h1 align="center">Hey! <img src="" width="30"/> Welcome to my page<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h1>
-
-📊 Коммиты во внешние репозитории: {external_commits or 'N/A'} 
 
 <!-- SOCIALIFY_START -->
 [![Socialify]({socialify_url})](https://github.com/MamonovEvgeniy/MamonovEvgeniy)
