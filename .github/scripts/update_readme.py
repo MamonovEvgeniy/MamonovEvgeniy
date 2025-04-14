@@ -23,18 +23,13 @@ def calculate_days_since():
 def get_commit_stats(owner):
     try:
         # Используем значения из переменных окружения
-        total_commits = int(os.getenv('TOTAL_COMMITS', 0))
-        current_year_commits = int(os.getenv('YEAR_COMMITS', 0))
         external_commits = int(os.getenv('EXTERNAL_COMMITS', 0))
-        
-        print(f"Total commits from env: {total_commits}")
-        print(f"Current year commits from env: {current_year_commits}")
         print(f"External commits from env: {external_commits}")
         
-        return total_commits, current_year_commits, external_commits
+        return external_commits
     except Exception as e:
         print(f"Error getting commit stats: {e}", file=sys.stderr)
-        return None, None, None
+        return None
 
 
 def generate_socialify_url(days_since):
@@ -53,7 +48,7 @@ def main():
         sys.exit("❌ Could not determine first commit date")
     
     owner = os.getenv('GITHUB_REPOSITORY_OWNER', 'MamonovEvgeniy')
-    total_commits, current_year_commits, external_commits = get_commit_stats(owner)
+    external_commits = get_commit_stats(owner)
 
     socialify_url = generate_socialify_url(days_since)
 
@@ -63,18 +58,12 @@ def main():
 📅 Дата регистрации на GitHub: {first_date}  
 ⏳ На GitHub: {days_since} дней 
 
-📊 Коммиты:  
-- Всего: {total_commits or 'N/A'}  
-- В этом году: {current_year_commits or 'N/A'}  
-- Во внешних репозиториях: {external_commits or 'N/A'} 
+📊 Коммиты во внешние репозитории: {external_commits or 'N/A'} 
 
 <!-- SOCIALIFY_START -->
 [![Socialify]({socialify_url})](https://github.com/MamonovEvgeniy/MamonovEvgeniy)
 <!-- SOCIALIFY_END -->
 
-<!-- activity_graph_START -->
-[![activity graph](https://github-readme-activity-graph.vercel.app/graph?username=MamonovEvgeniy&theme=github-dark-dimmed&custom_title=MamonovEvgeniy%20Activity%20Graph&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-<!-- activity_graph_END -->
 """
 
     Path("README.md").write_text(readme_content, encoding="utf-8")
