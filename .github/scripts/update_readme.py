@@ -60,7 +60,7 @@ def main():
 <!-- SOCIALIFY_END -->
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/MamonovEvgeniy/media-assets/main/video/intro3.gif" width="1200">
+  <img src="https://raw.githubusercontent.com/MamonovEvgeniy/media-assets/main/video/intro.gif" width="1200">
 </div>
 """
 
