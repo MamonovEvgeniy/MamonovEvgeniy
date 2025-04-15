@@ -59,6 +59,9 @@ def main():
 [![Socialify]({socialify_url})](https://github.com/MamonovEvgeniy/MamonovEvgeniy)
 <!-- SOCIALIFY_END -->
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MamonovEvgeniy/media-assets/main/video/intro3.gif" width="1200">
+</div>
 """
 
     Path("README.md").write_text(readme_content, encoding="utf-8")
