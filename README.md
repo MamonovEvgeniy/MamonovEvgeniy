@@ -27,9 +27,11 @@
  <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
 <p align="center">
  <img src="https://img.shields.io/badge/-Python-1CAC78?style=flat-square&logo=python"/>
+ <img src="https://img.shields.io/badge/-Java-FFD700?style=flat-square&logo=java"/>
+ <img src="https://img.shields.io/static/v1?label=&message=Go&color=00ADD8&logo=Go&logoColor=FFFFFF"/>
  <img src="https://img.shields.io/badge/C-blue?style=flat-square&logo=c&logoColor=white"/>
  <img src="https://img.shields.io/badge/-C++-blue?style=flat-square&logo=cplusplus"/>
- <img src="https://img.shields.io/badge/-Java-FFD700?style=flat-square&logo=java"/>
+ <img src="https://img.shields.io/static/v1?label=&message=Shell&color=4EAA25&logo=GNU%20Bash&logoColor=FFFFFF"/>
  <img src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
  <img src="https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3"/>
  <img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=flat-square&logo=bootstrap"/>
