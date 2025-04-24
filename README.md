@@ -19,6 +19,9 @@
 
 <h2> Hi, I'm Evgeniy! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
 
+### Visitor count
+<img src="https://profile-counter.glitch.me/MamonovEvgeniy/count.svg" />
+
 <!-- STACK_START -->
  <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
 <p align="center">
