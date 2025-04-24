@@ -1,6 +1,7 @@
 
 
 
+
 <h1 align="center">Hey! <img src="https://media.tenor.com/C84C_fqg7Y0AAAAj/pedro-dancing-racoon.gif" width="50"/> Welcome to my page<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/></h1>
 
 <!-- SOCIALIFY_START -->
@@ -65,7 +66,4 @@
 <a href="mailto:spitefuldragonsg@gmail.com" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/gmail.svg" alt="" height="30" width="40" /></a>
 </p>
 <!-- Contact_END -->
-
-
-
 
