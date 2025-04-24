@@ -15,7 +15,24 @@
   <img src="https://badges.pufler.dev/commits/yearly/MamonovEvgeniy" />
  </p>
 <!-- SHIELDS_END -->
- 
+
+ <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
+
+<p align="center">
+ <img src="https://img.shields.io/badge/-python-black?style=flat-square&logo=python"/>
+ <img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white"/>
+ <img src="https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c"/>
+ <img src="https://img.shields.io/badge/-java-E34A86?style=flat-square&logo=java"/>
+ <img src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+ <img src="https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3"/>
+ <img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=flat-square&logo=bootstrap"/>
+ <img src="https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript"/>
+ <img src="https://img.shields.io/badge/-MongoDB-black?style=flat-square&logo=mongodb"/>
+ <img src="https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql"/>
+ <img src="https://img.shields.io/badge/-Git-black?style=flat-square&logo=git"/>
+ <img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github"/>
+</p>
+
 <!-- MEDIA_START -->
 <div align="center">
   <img src="https://raw.githubusercontent.com/MamonovEvgeniy/media-assets/main/video/intro.gif" width="1200">
@@ -31,4 +48,6 @@
 <a href="https://www.instagram.com/1neuronchik/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="" height="30" width="40" /></a>
 </p>
 <!-- Contact_END -->
+
+
 
