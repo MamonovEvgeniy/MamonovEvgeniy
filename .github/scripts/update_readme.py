@@ -53,11 +53,6 @@ def main():
     socialify_url = generate_socialify_url(days_since, first_date, external_commits or 0)
 
     readme_content = f"""
-
-
-
-
-
 <h1 align="center">Hey! <img src="https://media.tenor.com/C84C_fqg7Y0AAAAj/pedro-dancing-racoon.gif" width="50"/> Welcome to my page<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/></h1>
 
 <!-- SOCIALIFY_START -->
@@ -75,6 +70,12 @@ def main():
 <!-- SHIELDS_END -->
 
 <h2> I'm Evgeniy! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
+<p>🔹 Experience & Expertise</p>
+<p>In IT since 2016: from system administration (Windows/Linux) to Senior Python development, DevOps, and SRE.
+My main professional activity is related to corporate projects, the code of which is stored in secure repositories.</p>
+<p>🔹 Code Availability</p>
+<p>I work with commercial and enterprise projects, so most of the code remains private.
+I can show individual implementations privately upon request.</p>
 
 <!-- STACK_START -->
  <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
@@ -104,7 +105,6 @@ def main():
 </p>
 <!-- SHIELDS_END -->
 
-
 <!-- MEDIA_START -->
 <div align="center">
   <img src="https://raw.githubusercontent.com/MamonovEvgeniy/media-assets/main/video/intro.gif" width="1200">
@@ -121,7 +121,6 @@ def main():
 <a href="mailto:spitefuldragonsg@gmail.com" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/gmail.svg" alt="" height="30" width="40" /></a>
 </p>
 <!-- Contact_END -->
-
 """
 
     Path("README.md").write_text(readme_content, encoding="utf-8")
