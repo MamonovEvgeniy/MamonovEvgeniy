@@ -55,6 +55,7 @@ def main():
     readme_content = f"""
 
 
+
 <h1 align="center">Hey! <img src="https://media.tenor.com/C84C_fqg7Y0AAAAj/pedro-dancing-racoon.gif" width="50"/> Welcome to my page<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/></h1>
 
 <!-- SOCIALIFY_START -->
@@ -72,6 +73,9 @@ def main():
 <!-- SHIELDS_END -->
 
 <h2> Hi, I'm Evgeniy! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
+
+### Visitor count
+<img src="https://profile-counter.glitch.me/MamonovEvgeniy/count.svg" />
 
 <!-- STACK_START -->
  <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
@@ -113,11 +117,9 @@ def main():
 <a href="https://discordapp.com/users/542012348354002955/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="" height="30" width="40" /></a>
 <a href="https://www.linkedin.com/in/evgenii-mamonov-62a412308/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="" height="30" width="40" /></a>
 <a href="https://www.instagram.com/1neuronchik/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="" height="30" width="40" /></a>
+<a href="mailto:spitefuldragonsg@gmail.com" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/gmail.svg" alt="" height="30" width="40" /></a>
 </p>
 <!-- Contact_END -->
-
-
-
 
 """
 
