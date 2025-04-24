@@ -81,6 +81,9 @@ def main():
  <img src="https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3"/>
  <img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=flat-square&logo=bootstrap"/>
  <img src="https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript"/>
+ <img src="https://img.shields.io/badge/-Docker-gray?style=flat-square&logo=docker"/>
+ <img src="https://img.shields.io/badge/-Apache-gray?style=flat-square&logo=apache"/>
+ <img src="https://img.shields.io/badge/-Nginx-gray?style=flat-square&logo=nginx"/>
  <img src="https://img.shields.io/badge/-PostgreSQL-FAE7B5?style=flat-square&logo=postgresql"/>
  <img src="https://img.shields.io/badge/-MySQL-FAE7B5?style=flat-square&logo=mysql"/>
  <img src="https://img.shields.io/badge/-MariaDB-FAE7B5?style=flat-square&logo=mariadb&logoColor=black"/>
