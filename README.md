@@ -11,7 +11,7 @@
 
 <!-- SHIELDS_START -->
 <p align="center">
-  <img src="https://badges.pufler.dev/visits/MamonovEvgeniy/MamonovEvgeniy"/> 
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=MamonovEvgeniy"/> 
   <img src="https://badges.pufler.dev/years/MamonovEvgeniy"/>
   <img src="https://badges.pufler.dev/commits/weekly/MamonovEvgeniy" />
   <img src="https://badges.pufler.dev/commits/monthly/MamonovEvgeniy" />
@@ -19,10 +19,7 @@
  </p>
 <!-- SHIELDS_END -->
 
-<h2> Hi, I'm Evgeniy! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
-
-### Visitor count
-<img src="https://profile-counter.glitch.me/MamonovEvgeniy/count.svg" />
+<h2> I'm Evgeniy! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
 
 <!-- STACK_START -->
  <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
