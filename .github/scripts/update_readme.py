@@ -71,7 +71,7 @@ def main():
 
 <h2> I'm Evgeniy! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
 <p>🔹 Experience & Expertise</p>
-<p>In IT since 2016: from system administration (Windows/Linux) to Senior Python development, DevOps, and SRE.
+<p>In IT since 2016: from system administration (Windows/Linux) to Senior Python developer, DevOps, and SRE.
 My main professional activity is related to corporate projects, the code of which is stored in secure repositories.</p>
 <p>🔹 Code Availability</p>
 <p>I work with commercial and enterprise projects, so most of the code remains private.
