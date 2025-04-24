@@ -1,5 +1,6 @@
 
 
+
 <h1 align="center">Hey! <img src="https://media.tenor.com/C84C_fqg7Y0AAAAj/pedro-dancing-racoon.gif" width="50"/> Welcome to my page<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/></h1>
 
 <!-- SOCIALIFY_START -->
@@ -16,8 +17,10 @@
  </p>
 <!-- SHIELDS_END -->
 
- <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
+<h2> Hi, I'm Evgeniy! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
 
+<!-- STACK_START -->
+ <h2 align="center">Technology Stack <img src="https://github.com/ritik307/ritik307/blob/main/images/laptop.gif" width="50"></h2>
 <p align="center">
  <img src="https://img.shields.io/badge/-Python-1CAC78?style=flat-square&logo=python"/>
  <img src="https://img.shields.io/badge/C-blue?style=flat-square&logo=c&logoColor=white"/>
@@ -40,6 +43,8 @@
  <img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github"/>
  <img src="https://img.shields.io/badge/-Bitbucket-black?style=flat-square&logo=bitbucket"/>
 </p>
+<!-- SHIELDS_END -->
+
 
 <!-- MEDIA_START -->
 <div align="center">
@@ -56,6 +61,7 @@
 <a href="https://www.instagram.com/1neuronchik/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="" height="30" width="40" /></a>
 </p>
 <!-- Contact_END -->
+
 
 
 
