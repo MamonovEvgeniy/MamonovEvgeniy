@@ -44,6 +44,8 @@ def generate_socialify_url(days_since, first_date, external_commits):
 
 def main():
     first_date, days_since = calculate_days_since()
+    print(f"first_date: {first_date}")
+    print(f"days_since: {days_since}")
     if not first_date:
         sys.exit("❌ Could not determine first commit date")
     
