@@ -5,13 +5,11 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     permissions:
       contents: write
     
@@ -19,16 +17,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Make scripts executable
-        run: chmod +x .github/scripts/*.sh
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-      - name: Get registration date
+      - name: Get first commit date
         id: get_date
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          chmod +x .github/scripts/*.sh
           DATE=$(bash .github/scripts/get_first_commit.sh "${{ github.repository_owner }}")
           echo "FIRST_COMMIT_DATE=$DATE" >> $GITHUB_ENV
           echo "Got first commit date: $DATE"
@@ -41,11 +41,6 @@ jobs:
           EXTERNAL=$(./.github/scripts/get_external_commits.sh "${{ github.repository_owner }}")
           echo "EXTERNAL_COMMITS=$EXTERNAL" >> $GITHUB_ENV
           echo "Got external commits: $EXTERNAL"
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
 
       - name: Update README
         env:
@@ -53,10 +48,9 @@ jobs:
           FIRST_COMMIT_DATE: ${{ env.FIRST_COMMIT_DATE }}
           EXTERNAL_COMMITS: ${{ env.EXTERNAL_COMMITS }}
         run: |
-          python -m pip install --upgrade pip
           python .github/scripts/update_readme.py
-          cat README.md
-          
+          git diff README.md || true  # Принудительно показываем diff
+
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
@@ -64,10 +58,14 @@ jobs:
           git add README.md
           
           if ! git diff --cached --quiet; then
-            git commit -m "📅 Automatic README update [skip ci]"
+            git commit -m "📅 Auto-update: ${{ env.FIRST_COMMIT_DATE }} | Days: $(( ( $(date +%s) - $(date -d "${{ env.FIRST_COMMIT_DATE }}" +%s) ) / 86400 ))"
             git pull --rebase
             git push
             echo "Changes pushed successfully"
           else
-            echo "No changes to commit"
+            echo "No changes detected in README.md"
+            echo "Debug info:"
+            echo "First commit date: ${{ env.FIRST_COMMIT_DATE }}"
+            echo "External commits: ${{ env.EXTERNAL_COMMITS }}"
+            python .github/scripts/update_readme.py --debug
           fi
