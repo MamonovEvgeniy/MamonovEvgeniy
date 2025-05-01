@@ -23,6 +23,9 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install dependencies
+        run: pip install regex
+
       - name: Get first commit date
         id: get_date
         env:
@@ -49,7 +52,7 @@ jobs:
           EXTERNAL_COMMITS: ${{ env.EXTERNAL_COMMITS }}
         run: |
           python .github/scripts/update_readme.py
-          git diff README.md || true  # Принудительно показываем diff
+          git diff README.md || true
 
       - name: Commit and push changes
         run: |
@@ -64,8 +67,4 @@ jobs:
             echo "Changes pushed successfully"
           else
             echo "No changes detected in README.md"
-            echo "Debug info:"
-            echo "First commit date: ${{ env.FIRST_COMMIT_DATE }}"
-            echo "External commits: ${{ env.EXTERNAL_COMMITS }}"
-            python .github/scripts/update_readme.py --debug
           fi
