@@ -52,6 +52,8 @@ def main():
 
     socialify_url = generate_socialify_url(days_since, first_date, external_commits or 0)
 
+    print(f"Generated Socialify URL: {socialify_url}")
+
     readme_content = f"""
 <h1 align="center">Hey! <img src="https://media.tenor.com/C84C_fqg7Y0AAAAj/pedro-dancing-racoon.gif" width="50"/> Welcome to my page<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/></h1>
 
