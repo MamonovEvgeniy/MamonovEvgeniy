@@ -62,7 +62,6 @@ jobs:
           
           if ! git diff --cached --quiet; then
             git commit -m "📅 Auto-update: ${{ env.FIRST_COMMIT_DATE }} | Days: $(( ( $(date +%s) - $(date -d "${{ env.FIRST_COMMIT_DATE }}" +%s) ) / 86400 ))"
-            git pull --rebase origin main
             git push origin main
             echo "Changes pushed successfully"
           else
