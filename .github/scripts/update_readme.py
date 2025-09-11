@@ -5,6 +5,7 @@ import os
 import sys
 from urllib.parse import quote
 import subprocess
+import re
 
 
 def calculate_days_since():
@@ -60,10 +61,9 @@ def main():
     template_content = template_path.read_text(encoding="utf-8")
 
     # Генерируем новый контент
-    new_content = template_content.replace(
-        "<!-- SOCIALIFY_PLACEHOLDER -->",
-        f"<!-- SOCIALIFY_START -->\n[![Socialify]({socialify_url})](https://github.com/MamonovEvgeniy/MamonovEvgeniy)\n<!-- SOCIALIFY_END -->"
-    )
+    socialify_pattern = r"<!-- SOCIALIFY_START -->\n.*?\n<!-- SOCIALIFY_END -->"
+    new_socialify_content = f"<!-- SOCIALIFY_START -->\n[![Socialify]({socialify_url})](https://github.com/MamonovEvgeniy/MamonovEvgeniy)\n<!-- SOCIALIFY_END -->"
+    new_content = re.sub(socialify_pattern, new_socialify_content, template_content, flags=re.DOTALL)
 
     # Читаем текущий README для сравнения
     readme_path = Path("README.md")
